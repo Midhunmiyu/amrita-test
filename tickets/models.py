@@ -124,7 +124,7 @@ class Leave(models.Model):
         return f"{self.employee.user.name} is leave from {self.start_date} to {self.end_date}"
 
 class Ticket(models.Model):
-    ticket_number = models.CharField(max_length=10,unique=True)
+    ticket_number = models.CharField(max_length=20,unique=True)
     description = models.TextField(null=True,blank=True)
     resolution_end_date = models.DateField(null=True,blank=True)
     assigned_employee = models.ForeignKey(Employee,on_delete=models.SET_NULL,related_name='employee_tickets', null=True, blank=True)
