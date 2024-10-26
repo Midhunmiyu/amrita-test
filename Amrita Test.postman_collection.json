@@ -1,0 +1,818 @@
+{
+	"info": {
+		"_postman_id": "72368a8d-7280-47d4-8c4b-073e6b97d90a",
+		"name": "Amrita Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27229609",
+		"_collection_link": "https://noor-al-hayat.postman.co/workspace/Noor-al-hayat-Workspace~08cb3df1-c701-4957-88ec-2ca22377e7b1/collection/27229609-72368a8d-7280-47d4-8c4b-073e6b97d90a?action=share&source=collection_link&creator=27229609"
+	},
+	"item": [
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Create Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "testtt2",
+									"type": "text"
+								},
+								{
+									"key": "resolution_end_date",
+									"value": "2024-11-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tickets/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tickets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tickets/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tickets",
+								""
+							],
+							"query": [
+								{
+									"key": "ticket_id",
+									"value": "53",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update ticket",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "assigned_employee",
+									"value": "12",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "testinggg done",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "resolution_end_date",
+									"value": "2024-11-11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tickets/?ticket_id=52",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tickets",
+								""
+							],
+							"query": [
+								{
+									"key": "ticket_id",
+									"value": "52"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ticket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tickets/?ticket_id=58",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tickets",
+								""
+							],
+							"query": [
+								{
+									"key": "ticket_id",
+									"value": "58"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "employee list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/employees/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							],
+							"query": [
+								{
+									"key": "employee_id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Madhu",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "UG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/employees/?employee_id=26",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							],
+							"query": [
+								{
+									"key": "employee_id",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/employees/?employee_id=26",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							],
+							"query": [
+								{
+									"key": "employee_id",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Athul Raj",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "athul21@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "UG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/employees/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shift",
+			"item": [
+				{
+					"name": "Shifts list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/shifts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"shifts",
+								""
+							],
+							"query": [
+								{
+									"key": "shift_id",
+									"value": "11",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create shift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "09:00:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "20:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/shifts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"shifts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update shift",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_time",
+									"value": "09:00:00",
+									"type": "text"
+								},
+								{
+									"key": "employee",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/shifts/?shift_id=16",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"shifts",
+								""
+							],
+							"query": [
+								{
+									"key": "shift_id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete shift",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/shifts/?shift_id=15",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"shifts",
+								""
+							],
+							"query": [
+								{
+									"key": "shift_id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Leave",
+			"item": [
+				{
+					"name": "Leave list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/leave/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"leave",
+								""
+							],
+							"query": [
+								{
+									"key": "leave_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create leave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-11-11",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-11-11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/leave/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"leave",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update leave",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "end_date",
+									"value": "2024-11-11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/leave/?leave_id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"leave",
+								""
+							],
+							"query": [
+								{
+									"key": "leave_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete leave",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/leave/?leave_id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"leave",
+								""
+							],
+							"query": [
+								{
+									"key": "leave_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DutyRoster",
+			"item": [
+				{
+					"name": "view dutyroster",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dutyroster/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dutyroster",
+								""
+							],
+							"query": [
+								{
+									"key": "duty_roster_id",
+									"value": "101",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create dutyroster",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-10-26",
+									"type": "text"
+								},
+								{
+									"key": "shift_start_time",
+									"value": "09:00:00",
+									"type": "text"
+								},
+								{
+									"key": "shift_end_time",
+									"value": "20:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dutyroster/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dutyroster",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update dutyroster",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "shift_start_time",
+									"value": "08:00:00",
+									"type": "text"
+								},
+								{
+									"key": "available",
+									"value": "True",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dutyroster/?duty_roster_id=104",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dutyroster",
+								""
+							],
+							"query": [
+								{
+									"key": "duty_roster_id",
+									"value": "104"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete dutyroster",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dutyroster/?duty_roster_id=104",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dutyroster",
+								""
+							],
+							"query": [
+								{
+									"key": "duty_roster_id",
+									"value": "104"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
