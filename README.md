@@ -1,7 +1,7 @@
 # How to run
 
 ## 1.create a virtual environment
-create a virtual environment and activate it using  the below commands
+Create a virtual environment and activate it using the commands provided below.
 ```bash
 py -m venv venv
 
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 
 ## 4.Database
-I use database PostgreSQL. Change the database settings as per yours
+I use PostgreSQL as my database. Please adjust the database settings accordingly to match your configuration.
 
 
 ```bash
@@ -36,7 +36,7 @@ DATABASES = {
     }
 }
 ```
-then import my database schema named amrita_test.sql to your database .After importing do migration command
+Next, import my database schema file named amrita_test.sql into your database. After the import, run the migration command.
 
 ```bash
 python manage.py migrate
@@ -56,7 +56,7 @@ celery -A employee_management beat -l INFO
 
 ## Celery
 
-Here i use celery for creating daily duty roster . I set the celery beat to create daily duty roster for all the employee by checking availability. 
+I use Celery to create a daily duty roster. I've configured Celery Beat to generate the roster for all employees by checking their availability. 
 ```bash
 from celery.schedules import crontab
 
@@ -67,6 +67,7 @@ CELERY_BEAT_SCHEDULE= {
     },
 }
 ```
-celery beat will run everyday morning 8AM (assuming the first shift starting from 9AM, so that it can check availability of employee before 1  hour of starting shift.)
+Celery Beat will run every day at 8 AM, allowing it to check employee availability one hour before the first shift starts at 9 AM. (assuming the first shift starting from 9AM)
 
-
+## Test API
+I've provided the Postman collections file for you. You can import it into Postman to test the API.
